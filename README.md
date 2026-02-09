@@ -11,10 +11,26 @@ A CLI tool to help Flutter and Dart developers manage dependencies safely and ef
 
 ## Installation
 
-**From pub.dev** (when published):
+**From pub.dev:**
 
 ```bash
 dart pub global activate flutter_dep_doctor
+```
+
+**Add to PATH:** If you get `command not found`, add the global bin directory to your PATH:
+
+```bash
+# Add to ~/.zshrc (or ~/.bashrc on Linux)
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+```
+
+Then run `source ~/.zshrc` (or open a new terminal).
+
+**Alternative – run without PATH:** Use `dart pub global run` instead:
+
+```bash
+dart pub global run flutter_dep_doctor scan .
+dart pub global run flutter_dep_doctor report .
 ```
 
 **From local source** (during development):
@@ -24,7 +40,7 @@ cd /path/to/flutter_dep_doctor
 dart pub global activate --source path .
 ```
 
-**Or run directly without installing:**
+**Run directly without installing:**
 
 ```bash
 dart run /path/to/flutter_dep_doctor/bin/flutter_dep_doctor.dart <command> [project_path]
@@ -103,4 +119,4 @@ flutter_dep_doctor/
 
 ## License
 
-BSD-3-Clause
+MIT
