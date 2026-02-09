@@ -1,6 +1,6 @@
 name: flutter_dep_doctor
 description: A CLI tool to help Flutter and Dart developers manage dependencies safely and efficiently.
-version: 0.1.0
+version: 0.1.1
 repository: https://github.com/my_org/flutter_dep_doctor
 license: MIT
 
